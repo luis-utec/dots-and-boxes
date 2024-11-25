@@ -22,7 +22,7 @@ void Board::display() {
         }
         cout << "+\n";
 
-        cout << setw(2) << " ";
+        cout << setw(3) << " ";
         for (int j = 0; j < size + 1; j++) { // Columnas
             cout << (verticalLines[i][j] == '|' ? "|   " : "    ");
         }
