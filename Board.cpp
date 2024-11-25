@@ -1,7 +1,4 @@
 #include "Board.h"
-#include <iostream>
-#include <iomanip>
-using namespace std;
 
 Board::Board(int size) : size(size) {
     horizontalLines = vector<vector<char>>(size + 1, vector<char>(size, ' '));

@@ -1,21 +1,20 @@
 #ifndef BOARD_H
 #define BOARD_H
 
-#include <vector>
-#include <string>
+#include "Def.h"
 
 class Board {
 private:
     int size;
-    std::vector<std::vector<char>> horizontalLines;
-    std::vector<std::vector<char>> verticalLines;
-    std::vector<std::vector<char>> boxes;
+    vector<vector<char>> horizontalLines;
+    vector<vector<char>> verticalLines;
+    vector<vector<char>> boxes;
 
 public:
     Board(int size);
     void display();
-    bool addLine(int x1, int y1, int x2, int y2, const std::string &player);
-    bool checkAndMarkBoxes(const std::string &player);
+    bool addLine(int x1, int y1, int x2, int y2, const string &player);
+    bool checkAndMarkBoxes(const string &player);
     bool isFull();
 };
 
