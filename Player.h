@@ -1,16 +1,16 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include <string>
+#include "Def.h"
 
 class Player {
 private:
-    std::string name;
+    string name;
     int score;
 
 public:
-    Player(const std::string &name);
-    std::string getName() const;
+    Player(const string &name);
+    string getName() const;
     void addScore(int points);
     int getScore() const;
 };
