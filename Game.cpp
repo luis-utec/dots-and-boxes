@@ -57,6 +57,9 @@ void Game::run() {
             if (!board->checkAndMarkBoxes(currentPlayer->getName())) {
                 switchPlayer();
             }
+	    if(board->checkAndMarkBoxes(currentPlayer->getName())) {
+		    currentPlayer->addScore(1);
+	    }
         } else {
             cout << "Movimiento invalido. Intenta de nuevo.\n";
         }
