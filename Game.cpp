@@ -38,8 +38,6 @@ void Game::switchPlayer() {
   }
 }
 
-}
-
 void Game::run() {
     while (!board->isFull()) {
         board->display();
