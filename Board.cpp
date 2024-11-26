@@ -18,13 +18,23 @@ void Board::display() {
         cout << setw(2) << i + 1 << " ";
         for (int j = 0; j < size - 1; j++) { // Filas
             cout << "+";
-            cout << (horizontalLines[i][j] == '-' ? "---" : "   ");
+	    if (horizontalLines[i][j] == '-') {
+	      cout << "---";
+	    } else {
+	      cout << "   ";
+}
+
+	    
         }
         cout << "+\n";
 
         cout << setw(3) << " ";
         for (int j = 0; j < size + 1; j++) { // Columnas
-            cout << (verticalLines[i][j] == '|' ? "|   " : "    ");
+	  if (verticalLines[i][j] == '|') {
+	    cout << "|   ";
+	  } else {
+	    cout << "    ";
+	  }
         }
         cout << endl;
     }

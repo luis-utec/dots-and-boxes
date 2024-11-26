@@ -31,7 +31,13 @@ Game::~Game() {
 }
 
 void Game::switchPlayer() {
-    currentPlayer = (currentPlayer == player1) ? player2 : player1;
+  if (currentPlayer == player1) {
+    currentPlayer = player2;
+  } else {
+    currentPlayer = player1;
+  }
+}
+
 }
 
 void Game::run() {
