@@ -13,20 +13,17 @@ void Board::display() {
     }
     cout << endl;
 
-    // Numero de +s
-    for (int i = 0; i < size ; i++) { // Numeros de la izquierda
-        cout << setw(2) << i + 1 << " ";
-        for (int j = 0; j < size - 1; j++) { // Filas
-            cout << "+";
-	    if (horizontalLines[i][j] == '-') {
-	      cout << "---";
-	    } else {
-	      cout << "   ";
-}
-
-	    
-        }
-        cout << "+\n";
+    for (int i = 0; i < size ; i++) { 
+      cout << setw(2) << i + 1 << " ";
+      for (int j = 0; j < size - 1; j++) { // Filas
+	cout << "+";
+	if (horizontalLines[i][j] == '-') {
+	  cout << "---";
+	} else {
+	  cout << "   ";
+	}
+      }
+      cout << "+\n";
 
         cout << setw(3) << " ";
         for (int j = 0; j < size + 1; j++) { // Columnas
@@ -87,3 +84,8 @@ bool Board::isFull() {
     }
     return true;
 }
+
+int Board::getSize() {
+  return size;
+}
+

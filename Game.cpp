@@ -49,9 +49,9 @@ void Game::run() {
         cin >> x1 >> y1;
         cout << "Ingrese destino: ";
         cin >> x2 >> y2;
-	if(x1 > 6 || x2 > 6 || y1 > 6 || y2 > 6)
-		cout << "Movimiento invalido. Ingrese de nuevo los valores." << endl;
-	}while(x1 > 6 || x2 > 6 || y1 > 6 || y2 > 6);
+	if(x1 > board->getSize() || x2 > board->getSize() || y1 > board->getSize() || y2 > board->getSize())
+	  cout << "Movimiento invalido. Ingrese de nuevo los valores." << endl;
+	}while(x1 > board->getSize() || x2 > board->getSize() || y1 > board->getSize() || y2 > board->getSize());
 
         if (board->addLine(x1, y1, x2, y2, currentPlayer->getName())) {
             if (!board->checkAndMarkBoxes(currentPlayer->getName())) {

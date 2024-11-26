@@ -12,6 +12,7 @@ private:
 
 public:
     Board(int size);
+    int getSize();
     void display();
     bool addLine(int x1, int y1, int x2, int y2, const string &player);
     bool checkAndMarkBoxes(const string &player);
